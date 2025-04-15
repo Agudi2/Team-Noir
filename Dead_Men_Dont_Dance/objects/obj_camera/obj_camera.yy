@@ -36,8 +36,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"Sprite7",
-    "path":"sprites/Sprite7/Sprite7.yy",
+    "name":"spr_camera",
+    "path":"sprites/spr_camera/spr_camera.yy",
   },
   "spriteMaskId":null,
   "visible":true,
