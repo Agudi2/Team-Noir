@@ -31,6 +31,9 @@ if (mouse_check_button_released(mb_right) and weapon_sprite != spr_empty) {
 	thrown.speed = random_range(7,10)
 	thrown.ammo = ammo
 	switch(weapon) {
+		case "Pistol":
+			thrown.sprite_index = spr_pistol;
+			break;
 		case "Machine Gun":
 			thrown.sprite_index = spr_machine_gun;
 			break;
@@ -51,6 +54,16 @@ if(mouse_check_button(mb_left) and ammo > 0) {
 		var shot_y = y;
 		
 		switch(weapon) {
+			case "Pistol":
+				shoot_timer = obj_controller.shoot_timer_pistol;
+				var shot = instance_create_layer(shot_x, shot_y, "Instances", obj_shot);
+				shot.direction = image_angle_ + random_range(-obj_controller.spread_pistol, obj_controller.spread_pistol);
+				shot.speed = obj_controller.shotspeed_pistol;
+				shot.friction = obj_controller.friction_pistol;
+				shot.damage = obj_controller.damage_pistol;
+				shot.image_angle = image_angle_;
+				ammo--;
+				break;
 			case "Machine Gun":
 				shoot_timer = obj_controller.shoot_timer_machine_gun;
 				var shot = instance_create_layer(shot_x, shot_y, "Instances", obj_shot);

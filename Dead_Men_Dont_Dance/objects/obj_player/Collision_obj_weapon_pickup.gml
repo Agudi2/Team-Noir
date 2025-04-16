@@ -4,6 +4,9 @@ if(keyboard_check(ord("E")) and weapon_sprite != spr_empty) {
 	thrown.speed = random_range(7,10)
 	thrown.ammo = ammo
 	switch(weapon) {
+		case "Pistol":
+			thrown.sprite_index = spr_pistol;
+			break;
 		case "Machine Gun":
 			thrown.sprite_index = spr_machine_gun;
 			break;
@@ -11,7 +14,7 @@ if(keyboard_check(ord("E")) and weapon_sprite != spr_empty) {
 			thrown.sprite_index = spr_shotgun;
 			break;
 	}
-	weapon = ""
+	weapon = "None"
 	weapon_sprite = spr_empty;
 	ammo = 0;
 }
