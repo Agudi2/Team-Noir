@@ -19,4 +19,13 @@ nothing_here_time = 360;
 nothing_here_timer = nothing_here_time;
 
 player_sighted = 3;
-line_of_sight_width = 15;
+attack_time = 60;
+switch(weapon) {
+	case "Pistol":
+		attack_time = obj_controller.shoot_timer_pistol;
+	case "Machine Gun":
+		attack_time = obj_controller.shoot_timer_machine_gun;
+	case "Shotgun":
+		attack_time = obj_controller.shoot_timer_shotgun;
+}
+attack_timer = attack_time;

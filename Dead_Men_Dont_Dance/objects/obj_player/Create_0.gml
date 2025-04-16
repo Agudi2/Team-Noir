@@ -7,3 +7,4 @@ image_angle_ = 0;
 enemy_refresh = 10;
 alarm[0] = enemy_refresh;
 circle_range = 100;
+circle_sound_range = 150;

@@ -41,6 +41,7 @@
     {"id":{"name":"obj_enemy","path":"objects/obj_enemy/obj_enemy.yy",},},
     {"id":{"name":"obj_pathway_setup","path":"objects/obj_pathway_setup/obj_pathway_setup.yy",},},
     {"id":{"name":"obj_player","path":"objects/obj_player/obj_player.yy",},},
+    {"id":{"name":"obj_shot_enemy","path":"objects/obj_shot_enemy/obj_shot_enemy.yy",},},
     {"id":{"name":"obj_shot","path":"objects/obj_shot/obj_shot.yy",},},
     {"id":{"name":"obj_tester","path":"objects/obj_tester/obj_tester.yy",},},
     {"id":{"name":"obj_wall","path":"objects/obj_wall/obj_wall.yy",},},

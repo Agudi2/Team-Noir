@@ -8,6 +8,11 @@ if(obj_controller.debug) {
 	draw_set_alpha(1);
 	draw_text(x, y+40, player_sighted);
 	
+	draw_set_alpha(0.1);
+	draw_circle_color(x, y, attack_range, c_red, c_red, 0);
+	draw_circle_color(x, y, attack_range_break, c_blue, c_blue, 0);
+	draw_set_alpha(1);
+	
 	var angle_diff = line_of_sight_width;
 	var line_length = 100
 	var line_middle_x = x + lengthdir_x(line_length, image_angle_)

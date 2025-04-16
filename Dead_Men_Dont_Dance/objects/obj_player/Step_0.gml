@@ -52,7 +52,14 @@ if(mouse_check_button(mb_left) and ammo > 0) {
 	if(shoot_timer <= 0) {
 		var shot_x = x;
 		var shot_y = y;
-		
+		var _list = ds_list_create();
+		var _num = collision_circle_list(x, y, circle_sound_range, obj_enemy, false, true, _list, false);
+		for(var i = 0; i < _num; i++) {
+			_list[| i].state = "check out";
+			_list[| i].position_target_x = x;
+			_list[| i].position_target_y = y;
+			_list[| i].player_sighted = 0;
+		}
 		switch(weapon) {
 			case "Pistol":
 				shoot_timer = obj_controller.shoot_timer_pistol;

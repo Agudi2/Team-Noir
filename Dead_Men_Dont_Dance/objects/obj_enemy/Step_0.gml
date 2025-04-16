@@ -1,4 +1,4 @@
-if(state == "idle") {
+if(state == "idle" || !instance_exists(obj_player)) {
 	exit;
 }
 
@@ -13,7 +13,7 @@ if(state == "check out") {
 if(state == "checking out") {
 	if(distance_to_point(position_target_x, position_target_y) < 5) {
 		state = "nothing here"
-			emote_index = 2;
+		emote_index = 2;
 	}
 }
 
@@ -35,28 +35,48 @@ if(state == "going back") {
 	}
 }
 
-/*switch(state) {
-	case "idle":
-		if(instance_exists(obj_player)) {
-			if(point_distance(x, y, obj_player.x, obj_player.y) < sight_range) {
-				var angle = point_direction(x, y, obj_player.x, obj_player.y)
-				if(abs(angle_difference(angle, image_angle_)) < 30) {
-					var line_wall = collision_line(x, y, x + lengthdir_x(sight_range, image_angle_), y + lengthdir_y(sight_range, image_angle_), obj_wall, 0, 0);
-					if(line_wall == noone) {
-						state = "attack"
-					}
-				}
-			}
+if(state == "attack") {
+	attack_timer--;
+	image_angle_ = point_direction(x, y, obj_player.x, obj_player.y);
+	if(attack_timer <= 0) {
+		if(!distance_to_object(obj_player) < attack_range_break) {
+			state = "check out";
+			position_target_x = obj_player.x;
+			position_target_y = obj_player.y;
 		}
-		emote_index = 0;
-		break;
-	case "patrol":
-		emote_index = 1;
-		break;
-	case "alert":
-		emote_index = 2;
-		break;
-	case "attack":
-		emote_index = 3;
-		break;
-}*/
+		attack_timer = attack_time;
+		var shot_x = x;
+		var shot_y = y;
+		switch(weapon) {
+			case "Pistol":
+				attack_timer = obj_controller.shoot_timer_pistol;
+				var shot = instance_create_layer(shot_x, shot_y, "Instances", obj_shot_enemy);
+				shot.direction = image_angle_ + random_range(-obj_controller.spread_pistol, obj_controller.spread_pistol);
+				shot.speed = obj_controller.shotspeed_pistol;
+				shot.friction = obj_controller.friction_pistol;
+				shot.damage = obj_controller.damage_pistol;
+				shot.image_angle = image_angle_;
+				break;
+			case "Machine Gun":
+				attack_timer = obj_controller.shoot_timer_machine_gun;
+				var shot = instance_create_layer(shot_x, shot_y, "Instances", obj_shot_enemy);
+				shot.direction = image_angle_ + random_range(-obj_controller.spread_machine_gun, obj_controller.spread_machine_gun);
+				shot.speed = obj_controller.shotspeed_machine_gun;
+				shot.friction = obj_controller.friction_machine_gun;
+				shot.damage = obj_controller.damage_machine_gun;
+				shot.image_angle = image_angle_;
+				break;
+			case "Shotgun":
+				attack_timer = obj_controller.shoot_timer_shotgun;
+				for (var i = 0; i < 5; i++) {
+					var shot = instance_create_layer(shot_x, shot_y, "Instances", obj_shot_enemy);
+					shot.direction = image_angle_ + random_range(-obj_controller.spread_shotgun, obj_controller.spread_machine_gun);
+					shot.speed = obj_controller.shotspeed_shotgun;
+					shot.friction = obj_controller.friction_shotgun;
+					shot.damage = obj_controller.damage_shotgun;
+					shot.image_angle = image_angle_;
+				}
+				break;
+		}
+	}
+}

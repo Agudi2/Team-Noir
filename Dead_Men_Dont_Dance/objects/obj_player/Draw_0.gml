@@ -14,5 +14,6 @@ if(obj_controller.debug) {
 	draw_rectangle(bbox_left, bbox_top, bbox_right, bbox_bottom, 1);
 	draw_set_alpha(0.3);
 	draw_circle(x, y, circle_range, 1);
+	draw_circle(x, y, circle_sound_range, 1);
 	draw_set_alpha(1);
 }
