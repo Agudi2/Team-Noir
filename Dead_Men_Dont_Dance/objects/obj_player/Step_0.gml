@@ -62,7 +62,9 @@ if(mouse_check_button(mb_left) and ammo > 0) {
 		var _list = ds_list_create();
 		var _num = collision_circle_list(x, y, circle_sound_range, obj_enemy, false, true, _list, false);
 		for(var i = 0; i < _num; i++) {
-			_list[| i].state = "check out";
+			if(_list[| i].state != "attack") {
+				_list[| i].state = "check out";
+			}
 			_list[| i].position_target_x = x;
 			_list[| i].position_target_y = y;
 			if( _list[| i].player_sighted > 0) {
