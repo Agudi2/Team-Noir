@@ -2,7 +2,7 @@ if(state == "idle" || !instance_exists(obj_player)) {
 	exit;
 }
 
-image_angle_ = lerp(image_angle_, direction, 0.1);
+image_angle_ = lerp_angle_deg(image_angle_, direction, 0.1);
 
 if(state == "check out") {
 	event_user(0);

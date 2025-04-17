@@ -46,6 +46,13 @@ if (mouse_check_button_released(mb_right) and weapon_sprite != spr_empty) {
 	ammo = 0;
 }
 
+if (keyboard_check_pressed(ord("G")) and grenades > 0) {
+	var thrown = instance_create_layer(x, y, "Instances", obj_grenade);
+	thrown.direction = image_angle_;
+	thrown.speed = random_range(7,10);
+	grenades--;
+}
+
 shoot_timer--;
 shoot_timer = clamp(shoot_timer, 0, shoot_timer);
 if(mouse_check_button(mb_left) and ammo > 0) {

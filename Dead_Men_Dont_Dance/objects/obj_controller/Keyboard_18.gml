@@ -5,3 +5,6 @@ if(keyboard_check_pressed(ord("D"))) {
 		debug = true;
 	}
 }
+if(keyboard_check_pressed(ord("R"))) {
+	room_restart();
+}

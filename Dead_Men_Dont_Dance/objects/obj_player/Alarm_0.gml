@@ -2,7 +2,7 @@ var _list = ds_list_create();
 var _num = collision_circle_list(x, y, circle_range, obj_enemy, false, true, _list, false);
 if(_num > 0) {
 	for(var i = 0; i < _num; i++) {
-		var sight_line = collision_line(x, y, _list[| i].x, _list[| i].y, obj_wall, 0, 0);
+		var sight_line = collision_line(x, y, _list[| i].x, _list[| i].y, obj_blocking, 0, 0);
 		if(sight_line == noone) {
 			var line_direction = point_direction(_list[| i].x, _list[| i].y, x, y);
 			var angle_diff = abs(angle_difference(line_direction, _list[| i].image_angle_));

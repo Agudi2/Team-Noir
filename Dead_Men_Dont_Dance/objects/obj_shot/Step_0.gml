@@ -1,3 +1,3 @@
-if (speed < 2) {
+if (speed < 5) {
 	instance_destroy();
 }

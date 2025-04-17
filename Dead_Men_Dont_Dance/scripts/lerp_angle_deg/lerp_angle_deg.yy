@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"lerp_angle_deg",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"lerp_angle_deg",
+  "parent":{
+    "name":"Scripts",
+    "path":"folders/Scripts.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}
