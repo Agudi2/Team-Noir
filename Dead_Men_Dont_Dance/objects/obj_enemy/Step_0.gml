@@ -1,6 +1,3 @@
-//image_angle_ = lerp(image_angle_, direction, 0.1);
-
-//image_angle_ = ceil(image_angle_);
 image_angle_ -= angle_difference(image_angle_, direction) * 0.1
 
 if(state == "check out") {
@@ -40,6 +37,7 @@ if(state == "attack") {
 		image_angle_ = point_direction(x, y, obj_player.x, obj_player.y);
 	} else {
 		state = "nothing here";
+		exit;
 	}
 	if(attack_timer <= 0) {
 		if(!distance_to_object(obj_player) < attack_range_break) {
