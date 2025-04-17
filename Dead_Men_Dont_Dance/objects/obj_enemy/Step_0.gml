@@ -39,9 +39,7 @@ if(state == "attack") {
 	if(instance_exists(obj_player)) {
 		image_angle_ = point_direction(x, y, obj_player.x, obj_player.y);
 	} else {
-		state = "going back";
-		emote_index = 1;
-		player_sighted = 1;
+		state = "nothing here";
 	}
 	if(attack_timer <= 0) {
 		if(!distance_to_object(obj_player) < attack_range_break) {
