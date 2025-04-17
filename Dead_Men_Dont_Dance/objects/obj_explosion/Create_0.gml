@@ -8,5 +8,7 @@ for(var i = 0; i < __num; i++) {
 	__list[| i].state = "check out";
 	__list[| i].position_target_x = x;
 	__list[| i].position_target_y = y;
-	__list[| i].player_sighted = 0;
+	if(__list[| i].player_sighted > 0) {
+		__list[| i].player_sighted = 0;
+	}
 }

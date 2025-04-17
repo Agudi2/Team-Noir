@@ -66,7 +66,6 @@
     {"id":{"name":"dev_room_programmer","path":"rooms/dev_room_programmer/dev_room_programmer.yy",},},
     {"id":{"name":"Room1","path":"rooms/Room1/Room1.yy",},},
     {"id":{"name":"ease_in_and_out","path":"scripts/ease_in_and_out/ease_in_and_out.yy",},},
-    {"id":{"name":"lerp_angle_deg","path":"scripts/lerp_angle_deg/lerp_angle_deg.yy",},},
     {"id":{"name":"spr_bottom_door_vertical","path":"sprites/spr_bottom_door_vertical/spr_bottom_door_vertical.yy",},},
     {"id":{"name":"spr_camera","path":"sprites/spr_camera/spr_camera.yy",},},
     {"id":{"name":"spr_controller","path":"sprites/spr_controller/spr_controller.yy",},},

@@ -1,8 +1,7 @@
-if(state == "idle" || !instance_exists(obj_player)) {
-	exit;
-}
+//image_angle_ = lerp(image_angle_, direction, 0.1);
 
-image_angle_ = lerp_angle_deg(image_angle_, direction, 0.1);
+//image_angle_ = ceil(image_angle_);
+image_angle_ -= angle_difference(image_angle_, direction) * 0.1
 
 if(state == "check out") {
 	event_user(0);
@@ -24,7 +23,7 @@ if(state == "nothing here") {
 		event_user(1);
 		state = "going back";
 		emote_index = 1;
-		player_sighted = 3;
+		player_sighted = 1;
 	}
 }
 
@@ -37,7 +36,13 @@ if(state == "going back") {
 
 if(state == "attack") {
 	attack_timer--;
-	image_angle_ = point_direction(x, y, obj_player.x, obj_player.y);
+	if(instance_exists(obj_player)) {
+		image_angle_ = point_direction(x, y, obj_player.x, obj_player.y);
+	} else {
+		state = "going back";
+		emote_index = 1;
+		player_sighted = 1;
+	}
 	if(attack_timer <= 0) {
 		if(!distance_to_object(obj_player) < attack_range_break) {
 			state = "check out";

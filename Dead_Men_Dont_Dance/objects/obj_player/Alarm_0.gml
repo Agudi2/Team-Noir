@@ -10,7 +10,7 @@ if(_num > 0) {
 				_list[| i].player_sighted -= 1;
 			}
 		} else {
-			_list[| i].player_sighted = 3;
+			_list[| i].player_sighted = 1;
 		}
 		
 		if(_list[| i].player_sighted <= 0) {

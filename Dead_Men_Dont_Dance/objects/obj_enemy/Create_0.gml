@@ -18,7 +18,7 @@ position_target_y = y;
 nothing_here_time = 360;
 nothing_here_timer = nothing_here_time;
 
-player_sighted = 3;
+player_sighted = 1;
 attack_time = 60;
 switch(weapon) {
 	case "Pistol":
