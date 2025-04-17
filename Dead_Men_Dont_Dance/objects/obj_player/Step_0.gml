@@ -67,9 +67,6 @@ if(mouse_check_button(mb_left) and ammo > 0) {
 			}
 			_list[| i].position_target_x = x;
 			_list[| i].position_target_y = y;
-			if( _list[| i].player_sighted > 0) {
-				_list[| i].player_sighted = 0;
-			}
 		}
 		switch(weapon) {
 			case "Pistol":
