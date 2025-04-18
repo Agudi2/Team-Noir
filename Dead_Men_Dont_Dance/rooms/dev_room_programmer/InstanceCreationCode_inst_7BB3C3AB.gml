@@ -1,1 +1,1 @@
-sprite_index = spr_machine_gun;
+sprite_index = spr_tommy_gun;

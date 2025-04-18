@@ -31,14 +31,20 @@ if (mouse_check_button_released(mb_right) and weapon_sprite != spr_empty) {
 	thrown.speed = random_range(7,10)
 	thrown.ammo = ammo
 	switch(weapon) {
-		case "Pistol":
-			thrown.sprite_index = spr_pistol;
+		case "M1911":
+			thrown.sprite_index = spr_m1911;
 			break;
-		case "Machine Gun":
-			thrown.sprite_index = spr_machine_gun;
+		case "Revolver":
+			thrown.sprite_index = spr_revolver;
 			break;
-		case "Shotgun":
-			thrown.sprite_index = spr_shotgun;
+		case "Tommy Gun":
+			thrown.sprite_index = spr_tommy_gun;
+			break;
+		case "Double Barrel":
+			thrown.sprite_index = spr_double_barrel;
+			break;
+		case "Trench Shotgun":
+			thrown.sprite_index = spr_trench_shotgun;
 			break;
 	}
 	weapon = ""
@@ -69,17 +75,27 @@ if(mouse_check_button(mb_left) and ammo > 0) {
 			_list[| i].position_target_y = y;
 		}
 		switch(weapon) {
-			case "Pistol":
-				shoot_timer = obj_controller.shoot_timer_pistol;
+			case "M1911":
+				shoot_timer = obj_controller.shoot_timer_m1911;
 				var shot = instance_create_layer(shot_x, shot_y, "Instances", obj_shot);
-				shot.direction = image_angle_ + random_range(-obj_controller.spread_pistol, obj_controller.spread_pistol);
-				shot.speed = obj_controller.shotspeed_pistol;
-				shot.friction = obj_controller.friction_pistol;
-				shot.damage = obj_controller.damage_pistol;
+				shot.direction = image_angle_ + random_range(-obj_controller.spread_m1911, obj_controller.spread_m1911);
+				shot.speed = obj_controller.shotspeed_m1911;
+				shot.friction = obj_controller.friction_m1911;
+				shot.damage = obj_controller.damage_m1911;
 				shot.image_angle = image_angle_;
 				ammo--;
 				break;
-			case "Machine Gun":
+			case "Revolver":
+				shoot_timer = obj_controller.shoot_timer_revolver;
+				var shot = instance_create_layer(shot_x, shot_y, "Instances", obj_shot);
+				shot.direction = image_angle_ + random_range(-obj_controller.spread_revolver, obj_controller.spread_revolver);
+				shot.speed = obj_controller.shotspeed_revolver;
+				shot.friction = obj_controller.friction_revolver;
+				shot.damage = obj_controller.damage_revolver;
+				shot.image_angle = image_angle_;
+				ammo--;
+				break;
+			case "Tommy Gun":
 				shoot_timer = obj_controller.shoot_timer_machine_gun;
 				var shot = instance_create_layer(shot_x, shot_y, "Instances", obj_shot);
 				shot.direction = image_angle_ + random_range(-obj_controller.spread_machine_gun, obj_controller.spread_machine_gun);
@@ -89,14 +105,26 @@ if(mouse_check_button(mb_left) and ammo > 0) {
 				shot.image_angle = image_angle_;
 				ammo--;
 				break;
-			case "Shotgun":
-				shoot_timer = obj_controller.shoot_timer_shotgun;
+			case "Double Barrel":
+				shoot_timer = obj_controller.shoot_timer_double_barrel;
 				for (var i = 0; i < 5; i++) {
 					var shot = instance_create_layer(shot_x, shot_y, "Instances", obj_shot);
-					shot.direction = image_angle_ + random_range(-obj_controller.spread_shotgun, obj_controller.spread_machine_gun);
-					shot.speed = obj_controller.shotspeed_shotgun;
-					shot.friction = obj_controller.friction_shotgun;
-					shot.damage = obj_controller.damage_shotgun;
+					shot.direction = image_angle_ + random_range(-obj_controller.spread_double_barrel, obj_controller.spread_trench_shotgun);
+					shot.speed = obj_controller.shotspeed_double_barrel;
+					shot.friction = obj_controller.friction_double_barrel;
+					shot.damage = obj_controller.damage_double_barrel;
+					shot.image_angle = image_angle_;
+				}
+				ammo--;
+				break;
+			case "Trench Shotgun":
+				shoot_timer = obj_controller.shoot_timer_trench_shotgun;
+				for (var i = 0; i < 5; i++) {
+					var shot = instance_create_layer(shot_x, shot_y, "Instances", obj_shot);
+					shot.direction = image_angle_ + random_range(-obj_controller.spread_trench_shotgun, obj_controller.spread_trench_shotgun);
+					shot.speed = obj_controller.shotspeed_trench_shotgun;
+					shot.friction = obj_controller.friction_trench_shotgun;
+					shot.damage = obj_controller.damage_trench_shotgun;
 					shot.image_angle = image_angle_;
 				}
 				ammo--;

@@ -4,14 +4,20 @@ if(keyboard_check(ord("E")) and weapon_sprite != spr_empty) {
 	thrown.speed = random_range(7,10)
 	thrown.ammo = ammo
 	switch(weapon) {
-		case "Pistol":
-			thrown.sprite_index = spr_pistol;
+		case "M1911":
+			thrown.sprite_index = spr_m1911;
 			break;
-		case "Machine Gun":
-			thrown.sprite_index = spr_machine_gun;
+		case "Revolver":
+			thrown.sprite_index = spr_revolver;
 			break;
-		case "Shotgun":
-			thrown.sprite_index = spr_shotgun;
+		case "Tommy Gun":
+			thrown.sprite_index = spr_tommy_gun;
+			break;
+		case "Double Barrel":
+			thrown.sprite_index = spr_double_barrel;
+			break;
+		case "Trench Shotgun":
+			thrown.sprite_index = spr_trench_shotgun;
 			break;
 	}
 	weapon = "None"

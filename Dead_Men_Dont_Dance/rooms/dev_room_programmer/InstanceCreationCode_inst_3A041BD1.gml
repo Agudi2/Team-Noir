@@ -1,1 +1,1 @@
-sprite_index = spr_shotgun;
+sprite_index = spr_double_barrel;

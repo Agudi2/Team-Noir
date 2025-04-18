@@ -49,16 +49,25 @@ if(state == "attack") {
 		var shot_x = x;
 		var shot_y = y;
 		switch(weapon) {
-			case "Pistol":
-				attack_timer = obj_controller.shoot_timer_pistol;
+			case "M1911":
+				attack_timer = obj_controller.shoot_timer_m1911;
 				var shot = instance_create_layer(shot_x, shot_y, "Instances", obj_shot_enemy);
-				shot.direction = image_angle_ + random_range(-obj_controller.spread_pistol, obj_controller.spread_pistol);
-				shot.speed = obj_controller.shotspeed_pistol;
-				shot.friction = obj_controller.friction_pistol;
-				shot.damage = obj_controller.damage_pistol;
+				shot.direction = image_angle_ + random_range(-obj_controller.spread_m1911, obj_controller.spread_m1911);
+				shot.speed = obj_controller.shotspeed_m1911;
+				shot.friction = obj_controller.friction_m1911;
+				shot.damage = obj_controller.damage_m1911;
 				shot.image_angle = image_angle_;
 				break;
-			case "Machine Gun":
+			case "Revolver":
+				attack_timer = obj_controller.shoot_timer_revolver;
+				var shot = instance_create_layer(shot_x, shot_y, "Instances", obj_shot_enemy);
+				shot.direction = image_angle_ + random_range(-obj_controller.spread_revolver, obj_controller.spread_revolver);
+				shot.speed = obj_controller.shotspeed_revolver;
+				shot.friction = obj_controller.friction_revolver;
+				shot.damage = obj_controller.damage_revolver;
+				shot.image_angle = image_angle_;
+				break;
+			case "Tommy Gun":
 				attack_timer = obj_controller.shoot_timer_machine_gun;
 				var shot = instance_create_layer(shot_x, shot_y, "Instances", obj_shot_enemy);
 				shot.direction = image_angle_ + random_range(-obj_controller.spread_machine_gun, obj_controller.spread_machine_gun);
@@ -67,14 +76,25 @@ if(state == "attack") {
 				shot.damage = obj_controller.damage_machine_gun;
 				shot.image_angle = image_angle_;
 				break;
-			case "Shotgun":
-				attack_timer = obj_controller.shoot_timer_shotgun;
+			case "Double Barrel":
+				attack_timer = obj_controller.shoot_timer_double_barrel;
 				for (var i = 0; i < 5; i++) {
 					var shot = instance_create_layer(shot_x, shot_y, "Instances", obj_shot_enemy);
-					shot.direction = image_angle_ + random_range(-obj_controller.spread_shotgun, obj_controller.spread_machine_gun);
-					shot.speed = obj_controller.shotspeed_shotgun;
-					shot.friction = obj_controller.friction_shotgun;
-					shot.damage = obj_controller.damage_shotgun;
+					shot.direction = image_angle_ + random_range(-obj_controller.spread_double_barrel, obj_controller.spread_trench_shotgun);
+					shot.speed = obj_controller.shotspeed_double_barrel;
+					shot.friction = obj_controller.friction_double_barrel;
+					shot.damage = obj_controller.damage_double_barrel;
+					shot.image_angle = image_angle_;
+				}
+				break;
+			case "Trench Shotgun":
+				attack_timer = obj_controller.shoot_timer_trench_shotgun;
+				for (var i = 0; i < 5; i++) {
+					var shot = instance_create_layer(shot_x, shot_y, "Instances", obj_shot_enemy);
+					shot.direction = image_angle_ + random_range(-obj_controller.spread_trench_shotgun, obj_controller.spread_trench_shotgun);
+					shot.speed = obj_controller.shotspeed_trench_shotgun;
+					shot.friction = obj_controller.friction_trench_shotgun;
+					shot.damage = obj_controller.damage_trench_shotgun;
 					shot.image_angle = image_angle_;
 				}
 				break;

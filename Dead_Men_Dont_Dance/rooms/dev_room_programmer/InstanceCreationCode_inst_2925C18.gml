@@ -1,1 +1,1 @@
-sprite_index = spr_pistol;
+sprite_index = spr_m1911;
