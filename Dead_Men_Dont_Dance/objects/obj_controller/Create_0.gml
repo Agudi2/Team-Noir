@@ -11,7 +11,7 @@ damage_double_barrel = 1;
 damage_trench_shotgun = 1;
 
 shotspeed_m1911 = 8;
-shotspeed_revolver = 8;
+shotspeed_revolver = 12;
 shotspeed_machine_gun = 8;
 shotspeed_double_barrel = 10;
 shotspeed_trench_shotgun = 10;
