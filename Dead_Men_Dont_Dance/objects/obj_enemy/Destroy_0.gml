@@ -12,7 +12,7 @@ if(weapon_sprite != spr_empty) {
 			break;
 		case "Tommy Gun":
 			passed_sprite = spr_tommy_gun;
-			passed_ammo = obj_controller.ammo_machine_gun;
+			passed_ammo = obj_controller.ammo_tommy_gun;
 			break;
 		case "Double Barrel":
 			passed_sprite = spr_double_barrel;

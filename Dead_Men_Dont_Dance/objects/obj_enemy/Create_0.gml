@@ -24,7 +24,7 @@ switch(weapon) {
 	case "Pistol":
 		attack_time = obj_controller.shoot_timer_m1911;
 	case "Machine Gun":
-		attack_time = obj_controller.shoot_timer_machine_gun;
+		attack_time = obj_controller.shoot_timer_tommy_gun;
 	case "Shotgun":
 		attack_time = obj_controller.shoot_timer_double_barrel;
 }

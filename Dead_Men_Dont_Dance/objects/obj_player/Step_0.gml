@@ -96,12 +96,12 @@ if(mouse_check_button(mb_left) and ammo > 0) {
 				ammo--;
 				break;
 			case "Tommy Gun":
-				shoot_timer = obj_controller.shoot_timer_machine_gun;
+				shoot_timer = obj_controller.shoot_timer_tommy_gun;
 				var shot = instance_create_layer(shot_x, shot_y, "Instances", obj_shot);
-				shot.direction = image_angle_ + random_range(-obj_controller.spread_machine_gun, obj_controller.spread_machine_gun);
-				shot.speed = obj_controller.shotspeed_machine_gun;
-				shot.friction = obj_controller.friction_machine_gun;
-				shot.damage = obj_controller.damage_machine_gun;
+				shot.direction = image_angle_ + random_range(-obj_controller.spread_tommy_gun, obj_controller.spread_tommy_gun);
+				shot.speed = obj_controller.shotspeed_tommy_gun;
+				shot.friction = obj_controller.friction_tommy_gun;
+				shot.damage = obj_controller.damage_tommy_gun;
 				shot.image_angle = image_angle_;
 				ammo--;
 				break;
