@@ -38,9 +38,12 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"spr_player_PLACEHOLDER",
-    "path":"sprites/spr_player_PLACEHOLDER/spr_player_PLACEHOLDER.yy",
+    "name":"spr_player",
+    "path":"sprites/spr_player/spr_player.yy",
   },
-  "spriteMaskId":null,
+  "spriteMaskId":{
+    "name":"spr_mask",
+    "path":"sprites/spr_mask/spr_mask.yy",
+  },
   "visible":true,
 }

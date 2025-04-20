@@ -22,5 +22,6 @@ if(keyboard_check(ord("E")) and weapon_sprite != spr_empty) {
 	}
 	weapon = "None"
 	weapon_sprite = spr_empty;
+	sprite_index = spr_player;
 	ammo = 0;
 }

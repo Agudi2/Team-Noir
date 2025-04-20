@@ -57,6 +57,7 @@ if(state == "attack") {
 				shot.friction = obj_controller.friction_m1911;
 				shot.damage = obj_controller.damage_m1911;
 				shot.image_angle = image_angle_;
+				audio_play_sound(snd_m1911, 1, false);
 				break;
 			case "Revolver":
 				attack_timer = obj_controller.shoot_timer_revolver;
@@ -66,6 +67,7 @@ if(state == "attack") {
 				shot.friction = obj_controller.friction_revolver;
 				shot.damage = obj_controller.damage_revolver;
 				shot.image_angle = image_angle_;
+				audio_play_sound(snd_revolver, 1, false);
 				break;
 			case "Tommy Gun":
 				attack_timer = obj_controller.shoot_timer_tommy_gun;

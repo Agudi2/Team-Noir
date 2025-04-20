@@ -18,10 +18,15 @@ if(!place_meeting(x, y+(verticalSpeed * walk_speed), obj_wall)) {
 }
 
 if (xprevious == x and yprevious == y) {
+	feet_image_index = 0;
 	image_speed = 0;
+	image_index = 0;
 	walk_timer = 0;
 } else {
-	image_speed = 1;
+	feet_image_index += feet_image_speed;
+	if(weapon_sprite == spr_empty) {
+		image_speed = 1;
+	}
 	walk_timer += 1;
 }
 
@@ -47,8 +52,9 @@ if (mouse_check_button_released(mb_right) and weapon_sprite != spr_empty) {
 			thrown.sprite_index = spr_trench_shotgun;
 			break;
 	}
-	weapon = ""
+	weapon = "None"
 	weapon_sprite = spr_empty;
+	sprite_index = spr_player;
 	ammo = 0;
 }
 
@@ -84,6 +90,7 @@ if(mouse_check_button(mb_left) and ammo > 0) {
 				shot.damage = obj_controller.damage_m1911;
 				shot.image_angle = image_angle_;
 				ammo--;
+				audio_play_sound(snd_m1911, 1, false);
 				break;
 			case "Revolver":
 				shoot_timer = obj_controller.shoot_timer_revolver;
@@ -94,6 +101,7 @@ if(mouse_check_button(mb_left) and ammo > 0) {
 				shot.damage = obj_controller.damage_revolver;
 				shot.image_angle = image_angle_;
 				ammo--;
+				audio_play_sound(snd_revolver, 1, false);
 				break;
 			case "Tommy Gun":
 				shoot_timer = obj_controller.shoot_timer_tommy_gun;
