@@ -88,6 +88,7 @@ if(state == "attack") {
 					shot.damage = obj_controller.damage_double_barrel;
 					shot.image_angle = image_angle_;
 				}
+				
 				break;
 			case "Trench Shotgun":
 				attack_timer = obj_controller.shoot_timer_trench_shotgun;
@@ -99,6 +100,7 @@ if(state == "attack") {
 					shot.damage = obj_controller.damage_trench_shotgun;
 					shot.image_angle = image_angle_;
 				}
+				audio_play_sound(snd_trench_shotgun, 1, false);
 				break;
 		}
 	}

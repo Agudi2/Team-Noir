@@ -22,7 +22,7 @@ if(other.weapon_sprite == spr_empty) {
 			case spr_double_barrel:
 				other.image_speed = 0;
 				other.weapon_sprite = spr_player_primary_arm;
-				other.sprite_index = spr_player_primary_armm;
+				other.sprite_index = spr_player_primary_arm;
 				other.weapon = "Double Barrel";
 				break;
 			case spr_trench_shotgun:

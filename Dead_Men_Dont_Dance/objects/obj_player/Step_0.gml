@@ -1,7 +1,9 @@
 direction = point_direction(x,y, mouse_x, mouse_y);
 image_angle_ = direction;
-
-
+recoil_timer = max(0, recoil_timer - 1);
+if (recoil_timer == 0 && weapon != "None") {
+	image_index = 0;
+}
 var left = keyboard_check(ord("A"));
 var right = keyboard_check(ord("D"));
 var up = keyboard_check(ord("W"));
@@ -20,7 +22,9 @@ if(!place_meeting(x, y+(verticalSpeed * walk_speed), obj_wall)) {
 if (xprevious == x and yprevious == y) {
 	feet_image_index = 0;
 	image_speed = 0;
-	image_index = 0;
+	if(weapon_sprite == spr_empty) {
+		image_index = 0;
+	}
 	walk_timer = 0;
 } else {
 	feet_image_index += feet_image_speed;
@@ -65,8 +69,7 @@ if (keyboard_check_pressed(ord("G")) and grenades > 0) {
 	grenades--;
 }
 
-shoot_timer--;
-shoot_timer = clamp(shoot_timer, 0, shoot_timer);
+shoot_timer = max(0, shoot_timer-1);
 if(mouse_check_button(mb_left) and ammo > 0) {
 	if(shoot_timer <= 0) {
 		var shot_x = x;
@@ -82,6 +85,8 @@ if(mouse_check_button(mb_left) and ammo > 0) {
 		}
 		switch(weapon) {
 			case "M1911":
+				shot_x = x + lengthdir_x(14, image_angle_-22);
+				shot_y = y + lengthdir_y(14, image_angle_-22);
 				shoot_timer = obj_controller.shoot_timer_m1911;
 				var shot = instance_create_layer(shot_x, shot_y, "Instances", obj_shot);
 				shot.direction = image_angle_ + random_range(-obj_controller.spread_m1911, obj_controller.spread_m1911);
@@ -89,10 +94,14 @@ if(mouse_check_button(mb_left) and ammo > 0) {
 				shot.friction = obj_controller.friction_m1911;
 				shot.damage = obj_controller.damage_m1911;
 				shot.image_angle = image_angle_;
+				recoil_timer = obj_controller.recoil_m1911;
+				image_index = 1;
 				ammo--;
 				audio_play_sound(snd_m1911, 1, false);
 				break;
 			case "Revolver":
+				shot_x = x + lengthdir_x(14, image_angle_-22);
+				shot_y = y + lengthdir_y(14, image_angle_-22);
 				shoot_timer = obj_controller.shoot_timer_revolver;
 				var shot = instance_create_layer(shot_x, shot_y, "Instances", obj_shot);
 				shot.direction = image_angle_ + random_range(-obj_controller.spread_revolver, obj_controller.spread_revolver);
@@ -100,10 +109,14 @@ if(mouse_check_button(mb_left) and ammo > 0) {
 				shot.friction = obj_controller.friction_revolver;
 				shot.damage = obj_controller.damage_revolver;
 				shot.image_angle = image_angle_;
+				recoil_timer = obj_controller.recoil_revolver;
+				image_index = 1;
 				ammo--;
 				audio_play_sound(snd_revolver, 1, false);
 				break;
 			case "Tommy Gun":
+				shot_x = x + lengthdir_x(19, image_angle_-22);
+				shot_y = y + lengthdir_y(14, image_angle_-22);
 				shoot_timer = obj_controller.shoot_timer_tommy_gun;
 				var shot = instance_create_layer(shot_x, shot_y, "Instances", obj_shot);
 				shot.direction = image_angle_ + random_range(-obj_controller.spread_tommy_gun, obj_controller.spread_tommy_gun);
@@ -111,9 +124,14 @@ if(mouse_check_button(mb_left) and ammo > 0) {
 				shot.friction = obj_controller.friction_tommy_gun;
 				shot.damage = obj_controller.damage_tommy_gun;
 				shot.image_angle = image_angle_;
+				recoil_timer = obj_controller.recoil_tommy_gun;
+				image_index = 1;
+				audio_play_sound(snd_tommy_gun, 1, false);
 				ammo--;
 				break;
 			case "Double Barrel":
+				shot_x = x + lengthdir_x(19, image_angle_-22);
+				shot_y = y + lengthdir_y(14, image_angle_-22);
 				shoot_timer = obj_controller.shoot_timer_double_barrel;
 				for (var i = 0; i < 5; i++) {
 					var shot = instance_create_layer(shot_x, shot_y, "Instances", obj_shot);
@@ -123,9 +141,14 @@ if(mouse_check_button(mb_left) and ammo > 0) {
 					shot.damage = obj_controller.damage_double_barrel;
 					shot.image_angle = image_angle_;
 				}
+				recoil_timer = obj_controller.recoil_double_barrel;
+				image_index = 1;
+				audio_play_sound(snd_double_barrel, 1, false);
 				ammo--;
 				break;
 			case "Trench Shotgun":
+				shot_x = x + lengthdir_x(19, image_angle_-22);
+				shot_y = y + lengthdir_y(14, image_angle_-22);
 				shoot_timer = obj_controller.shoot_timer_trench_shotgun;
 				for (var i = 0; i < 5; i++) {
 					var shot = instance_create_layer(shot_x, shot_y, "Instances", obj_shot);
@@ -135,7 +158,10 @@ if(mouse_check_button(mb_left) and ammo > 0) {
 					shot.damage = obj_controller.damage_trench_shotgun;
 					shot.image_angle = image_angle_;
 				}
+				recoil_timer = obj_controller.recoil_trench_shotgun;
+				image_index = 1;
 				ammo--;
+				audio_play_sound(snd_trench_shotgun, 1, false);
 				break;
 		}
 		

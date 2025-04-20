@@ -31,5 +31,11 @@ shoot_timer_trench_shotgun = 80;
 spread_m1911 = 0;
 spread_revolver = 0;
 spread_tommy_gun = 15;
-spread_double_barrel = 5;
-spread_trench_shotgun = 3;
+spread_double_barrel = 7;
+spread_trench_shotgun = 5;
+
+recoil_m1911 = 10;
+recoil_revolver = 15;
+recoil_tommy_gun = 5;
+recoil_double_barrel = 25;
+recoil_trench_shotgun = 20;

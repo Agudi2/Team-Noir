@@ -42,6 +42,9 @@
     "name":"spr_enemy_red",
     "path":"sprites/spr_enemy_red/spr_enemy_red.yy",
   },
-  "spriteMaskId":null,
+  "spriteMaskId":{
+    "name":"spr_mask",
+    "path":"sprites/spr_mask/spr_mask.yy",
+  },
   "visible":true,
 }
