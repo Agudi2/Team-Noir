@@ -77,6 +77,7 @@ if(state == "attack") {
 				shot.friction = obj_controller.friction_tommy_gun;
 				shot.damage = obj_controller.damage_tommy_gun;
 				shot.image_angle = image_angle_;
+				audio_play_sound(snd_tommy_gun, 1, false);
 				break;
 			case "Double Barrel":
 				attack_timer = obj_controller.shoot_timer_double_barrel;
@@ -88,7 +89,7 @@ if(state == "attack") {
 					shot.damage = obj_controller.damage_double_barrel;
 					shot.image_angle = image_angle_;
 				}
-				
+				audio_play_sound(snd_double_barrel, 1, false);
 				break;
 			case "Trench Shotgun":
 				attack_timer = obj_controller.shoot_timer_trench_shotgun;
