@@ -1,7 +1,8 @@
 alarm[0] = 30;
 radius = 48;
 circle_sound_range = 200;
-audio_play_sound(snd_grenade_explosion, 1, false);
+explosion_sound = snd_grenade_explosion;
+audio_play_sound(explosion_sound, 1, false);
 screen_shake(7, 13);
 var __list = ds_list_create();
 var __num = collision_circle_list(x, y, circle_sound_range, obj_enemy, false, true, __list, false);

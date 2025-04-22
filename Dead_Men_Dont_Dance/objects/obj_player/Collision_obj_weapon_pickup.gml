@@ -1,4 +1,4 @@
-if(keyboard_check(ord("E")) and weapon_sprite != spr_empty) {
+if(keyboard_check(ord("E")) and weapon_sprite != spr_empty and roll_timer <= 0) {
 	var thrown = instance_create_layer(x, y, "Instances", obj_weapon_throw);
 	thrown.direction = image_angle_;
 	thrown.speed = random_range(7,10)

@@ -1,4 +1,4 @@
-if(other.weapon_sprite == spr_empty) {
+if(other.weapon_sprite == spr_empty && other.roll_timer <= 0) {
 	if(keyboard_check_released(ord("E"))) {
 		switch(sprite_index) {
 			case spr_m1911:
