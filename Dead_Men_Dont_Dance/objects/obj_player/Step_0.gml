@@ -182,7 +182,7 @@ if(roll_timer <= 0) {
 if(roll_timer > 0) {
 	if(horizontalSpeed != 0 || verticalSpeed != 0) {
 		roll_direction = point_direction(0, 0, horizontalSpeed, verticalSpeed);
-	} else {
+	} else if(roll_timer == roll_length) {
 		roll_direction = direction;
 	}
 	sprite_index = spr_player_roll;
