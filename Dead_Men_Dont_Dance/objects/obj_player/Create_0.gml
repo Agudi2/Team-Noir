@@ -20,9 +20,10 @@ roll_direction = 0;
 roll_speed = 4;
 roll_length = 30;
 roll_timer = 0;
-roll_reset = 120;
+roll_reset = 60;
 roll_reset_timer = 0;
 invincible = false;
 saved_sprite = spr_empty;
 
 cheat_invincible = false;
+cheat_infinite_ammo = false;

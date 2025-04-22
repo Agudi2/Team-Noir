@@ -17,6 +17,13 @@ if(keyboard_check_pressed(ord("I"))) {
 	}
 }
 
+if(keyboard_check_pressed(ord("N"))) {
+	if(instance_exists(obj_player)) {
+		obj_player.cheat_infinite_ammo = !obj_player.cheat_infinite_ammo;
+	}
+}
+
 if(keyboard_check_pressed(ord("S"))) {
 	obj_camera.shake = !obj_camera.shake;
 }
+
