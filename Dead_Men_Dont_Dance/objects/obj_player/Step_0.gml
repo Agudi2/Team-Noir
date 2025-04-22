@@ -183,9 +183,11 @@ if(roll_timer > 0) {
 	if((horizontalSpeed != 0 || verticalSpeed != 0) && (roll_timer == roll_length)) {
 		image_speed = 1;
 		roll_direction = point_direction(x, y, x+horizontalSpeed, y+verticalSpeed);
+		image_angle_ = roll_direction;
 	} else if(roll_timer == roll_length) {
 		image_speed = 1;
 		roll_direction = direction;
+		image_angle_ = roll_direction;
 	}
 	sprite_index = spr_player_roll;
 	if(!cheat_invincible) {
