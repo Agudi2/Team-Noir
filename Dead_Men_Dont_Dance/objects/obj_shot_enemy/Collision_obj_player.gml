@@ -1,2 +1,4 @@
-instance_destroy();
-instance_destroy(other);
+if(!other.invincible) {
+	instance_destroy();
+	instance_destroy(other);
+}

@@ -20,12 +20,5 @@ nothing_here_timer = nothing_here_time;
 
 player_sighted = 1;
 attack_time = 60;
-switch(weapon) {
-	case "Pistol":
-		attack_time = obj_controller.shoot_timer_m1911;
-	case "Machine Gun":
-		attack_time = obj_controller.shoot_timer_tommy_gun;
-	case "Shotgun":
-		attack_time = obj_controller.shoot_timer_double_barrel;
-}
 attack_timer = attack_time;
+times_fired = 0;

@@ -40,7 +40,8 @@ if(state == "attack") {
 		exit;
 	}
 	if(attack_timer <= 0) {
-		if(!distance_to_object(obj_player) < attack_range_break) {
+		times_fired++;
+		if(distance_to_object(obj_player) >= attack_range_break) {
 			state = "check out";
 			position_target_x = obj_player.x;
 			position_target_y = obj_player.y;
@@ -57,6 +58,10 @@ if(state == "attack") {
 				shot.friction = obj_controller.friction_m1911;
 				shot.damage = obj_controller.damage_m1911;
 				shot.image_angle = image_angle_;
+				if(times_fired >= obj_controller.ammo_m1911) {
+					attack_timer = obj_controller.shoot_timer_m1911 * 4;
+					times_fired = 0;
+				}
 				audio_play_sound(snd_m1911, 1, false);
 				break;
 			case "Revolver":
@@ -67,6 +72,10 @@ if(state == "attack") {
 				shot.friction = obj_controller.friction_revolver;
 				shot.damage = obj_controller.damage_revolver;
 				shot.image_angle = image_angle_;
+				if(times_fired >= obj_controller.ammo_revolver) {
+					attack_timer = obj_controller.shoot_timer_revolver * 4;
+					times_fired = 0;
+				}
 				audio_play_sound(snd_revolver, 1, false);
 				break;
 			case "Tommy Gun":
@@ -77,6 +86,10 @@ if(state == "attack") {
 				shot.friction = obj_controller.friction_tommy_gun;
 				shot.damage = obj_controller.damage_tommy_gun;
 				shot.image_angle = image_angle_;
+				if(times_fired >= obj_controller.ammo_tommy_gun) {
+					attack_timer = 80;
+					times_fired = 0;
+				}
 				audio_play_sound(snd_tommy_gun, 1, false);
 				break;
 			case "Double Barrel":
@@ -89,6 +102,10 @@ if(state == "attack") {
 					shot.damage = obj_controller.damage_double_barrel;
 					shot.image_angle = image_angle_;
 				}
+				if(times_fired >= obj_controller.ammo_double_barrel) {
+					attack_timer = obj_controller.shoot_timer_double_barrel * 8;
+					times_fired = 0;
+				}
 				audio_play_sound(snd_double_barrel, 1, false);
 				break;
 			case "Trench Shotgun":
@@ -100,6 +117,10 @@ if(state == "attack") {
 					shot.friction = obj_controller.friction_trench_shotgun;
 					shot.damage = obj_controller.damage_trench_shotgun;
 					shot.image_angle = image_angle_;
+				}
+				if(times_fired >= obj_controller.ammo_trench_shotgun) {
+					attack_timer = obj_controller.shoot_timer_trench_shotgun * 4;
+					times_fired = 0;
 				}
 				audio_play_sound(snd_trench_shotgun, 1, false);
 				break;
