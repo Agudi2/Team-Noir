@@ -16,6 +16,7 @@ alarm[0] = enemy_refresh;
 circle_range = 100;
 circle_sound_range = 150;
 
+roll_direction = 0;
 roll_speed = 4;
 roll_length = 30;
 roll_timer = 0;

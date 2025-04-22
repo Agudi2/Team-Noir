@@ -1,3 +1,10 @@
+var left = keyboard_check(ord("A"));
+var right = keyboard_check(ord("D"));
+var up = keyboard_check(ord("W"));
+var down = keyboard_check(ord("S"));
+
+var horizontalSpeed = right - left;
+var verticalSpeed = down - up;
 if(roll_timer <= 0) {
 	direction = point_direction(x,y, mouse_x, mouse_y);
 	image_angle_ = direction;
@@ -5,13 +12,6 @@ if(roll_timer <= 0) {
 	if (recoil_timer == 0 && weapon != "None") {
 		image_index = 0;
 	}
-	var left = keyboard_check(ord("A"));
-	var right = keyboard_check(ord("D"));
-	var up = keyboard_check(ord("W"));
-	var down = keyboard_check(ord("S"));
-
-	var horizontalSpeed = right - left;
-	var verticalSpeed = down - up;
 
 	if(!place_meeting(x+(horizontalSpeed * walk_speed), y, obj_wall)) {
 		x += horizontalSpeed * walk_speed;
@@ -180,18 +180,23 @@ if(roll_timer <= 0) {
 }
 
 if(roll_timer > 0) {
+	if(horizontalSpeed != 0 || verticalSpeed != 0) {
+		roll_direction = point_direction(0, 0, horizontalSpeed, verticalSpeed);
+	} else {
+		roll_direction = direction;
+	}
 	sprite_index = spr_player_roll;
 	if(!cheat_invincible) {
 		invincible = true;
 	}
 	roll_timer--;
-	var dx = lengthdir_x(roll_speed, direction);
-    var dy = lengthdir_y(roll_speed, direction);
+	var dx = lengthdir_x(roll_speed, roll_direction);
+    var dy = lengthdir_y(roll_speed, roll_direction);
 	if (!place_meeting(x + dx, y, obj_wall)) {
-		x += lengthdir_x(roll_speed, direction);
+		x += lengthdir_x(roll_speed, roll_direction);
 	}
 	if (!place_meeting(x, y + dy, obj_wall)) {
-		y += lengthdir_y(roll_speed, direction);
+		y += lengthdir_y(roll_speed, roll_direction);
 	}
 	if(roll_timer == 0) {
 		if(!cheat_invincible) {
