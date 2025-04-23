@@ -42,6 +42,7 @@
   "name":"Dead_Men_Dont_Dance",
   "resources":[
     {"id":{"name":"fdefault","path":"fonts/fdefault/fdefault.yy",},},
+    {"id":{"name":"flarge","path":"fonts/flarge/flarge.yy",},},
     {"id":{"name":"fsmall","path":"fonts/fsmall/fsmall.yy",},},
     {"id":{"name":"obj_blocking","path":"objects/obj_blocking/obj_blocking.yy",},},
     {"id":{"name":"obj_bottom_door_vertical","path":"objects/obj_bottom_door_vertical/obj_bottom_door_vertical.yy",},},

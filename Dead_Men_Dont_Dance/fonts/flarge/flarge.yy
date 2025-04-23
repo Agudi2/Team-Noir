@@ -1,6 +1,6 @@
 {
   "$GMFont":"",
-  "%Name":"fsmall",
+  "%Name":"flarge",
   "AntiAlias":1,
   "applyKerning":0,
   "ascender":20,
@@ -206,7 +206,7 @@
   "last":0,
   "lineHeight":25,
   "maintainGms1Font":false,
-  "name":"fsmall",
+  "name":"flarge",
   "parent":{
     "name":"Fonts",
     "path":"folders/Fonts.yy",
