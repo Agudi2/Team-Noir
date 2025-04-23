@@ -12,7 +12,7 @@ fill_ratio = clamp(fill_ratio, 0, 1);
 draw_set_color(c_black);
 draw_rectangle(x_pos, y_pos, x_pos + bar_width, y_pos + bar_height, false);
 
-draw_set_color(c_white);
+draw_set_color(c_ltgrey);
 draw_rectangle(x_pos, y_pos, x_pos + bar_width * fill_ratio, y_pos + bar_height, false);
-
+draw_set_color(c_white);
 draw_rectangle(x_pos, y_pos, x_pos + bar_width, y_pos + bar_height, true);

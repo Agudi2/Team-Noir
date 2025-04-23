@@ -75,7 +75,7 @@ if(roll_timer <= 0) {
 	}
 
 	shoot_timer = max(0, shoot_timer-1);
-	if(mouse_check_button(mb_left) and (ammo > 0 || cheat_infinite_ammo)) {
+	if(mouse_check_button(mb_left) and (ammo > 0 || (cheat_infinite_ammo and weapon != "None"))) {
 		if(shoot_timer <= 0) {
 			var shot_x = x;
 			var shot_y = y;
