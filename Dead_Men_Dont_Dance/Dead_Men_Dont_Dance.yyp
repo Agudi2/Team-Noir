@@ -52,6 +52,7 @@
     {"id":{"name":"obj_grenade_pickup","path":"objects/obj_grenade_pickup/obj_grenade_pickup.yy",},},
     {"id":{"name":"obj_grenade","path":"objects/obj_grenade/obj_grenade.yy",},},
     {"id":{"name":"obj_left_door_horizontal","path":"objects/obj_left_door_horizontal/obj_left_door_horizontal.yy",},},
+    {"id":{"name":"obj_next_level","path":"objects/obj_next_level/obj_next_level.yy",},},
     {"id":{"name":"obj_pathway_setup","path":"objects/obj_pathway_setup/obj_pathway_setup.yy",},},
     {"id":{"name":"obj_player","path":"objects/obj_player/obj_player.yy",},},
     {"id":{"name":"obj_right_door_horizonal","path":"objects/obj_right_door_horizonal/obj_right_door_horizonal.yy",},},
@@ -63,6 +64,7 @@
     {"id":{"name":"obj_weapon_pickup","path":"objects/obj_weapon_pickup/obj_weapon_pickup.yy",},},
     {"id":{"name":"obj_weapon_throw","path":"objects/obj_weapon_throw/obj_weapon_throw.yy",},},
     {"id":{"name":"dev_room_designer","path":"rooms/dev_room_designer/dev_room_designer.yy",},},
+    {"id":{"name":"dev_room_programmer_copy","path":"rooms/dev_room_programmer_copy/dev_room_programmer_copy.yy",},},
     {"id":{"name":"dev_room_programmer","path":"rooms/dev_room_programmer/dev_room_programmer.yy",},},
     {"id":{"name":"Level1","path":"rooms/Level1/Level1.yy",},},
     {"id":{"name":"Level2","path":"rooms/Level2/Level2.yy",},},
@@ -116,6 +118,7 @@
     {"roomId":{"name":"dev_room_programmer","path":"rooms/dev_room_programmer/dev_room_programmer.yy",},},
     {"roomId":{"name":"Room1","path":"rooms/Room1/Room1.yy",},},
     {"roomId":{"name":"dev_room_designer","path":"rooms/dev_room_designer/dev_room_designer.yy",},},
+    {"roomId":{"name":"dev_room_programmer_copy","path":"rooms/dev_room_programmer_copy/dev_room_programmer_copy.yy",},},
   ],
   "templateType":"game",
   "TextureGroups":[

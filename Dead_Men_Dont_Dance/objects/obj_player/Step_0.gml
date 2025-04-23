@@ -103,7 +103,9 @@ if(roll_timer <= 0) {
 					image_index = 1;
 					screen_shake(obj_controller.shake_mag_m1911, obj_controller.shake_len_m1911);
 					audio_play_sound(snd_m1911, 1, false);
-					ammo--;
+					if(!cheat_infinite_ammo) {
+						ammo--;
+					}
 					break;
 				case "Revolver":
 					shot_x = x + lengthdir_x(14, image_angle_-22);
@@ -119,7 +121,9 @@ if(roll_timer <= 0) {
 					image_index = 1;
 					screen_shake(obj_controller.shake_mag_revolver, obj_controller.shake_len_revolver);
 					audio_play_sound(snd_revolver, 1, false);
-					ammo--;
+					if(!cheat_infinite_ammo) {
+						ammo--;
+					}
 					break;
 				case "Tommy Gun":
 					shot_x = x + lengthdir_x(19, image_angle_-22);
@@ -135,7 +139,9 @@ if(roll_timer <= 0) {
 					image_index = 1;
 					screen_shake(obj_controller.shake_mag_tommy_gun, obj_controller.shake_len_tommy_gun);
 					audio_play_sound(snd_tommy_gun, 1, false);
-					ammo--;
+					if(!cheat_infinite_ammo) {
+						ammo--;
+					}
 					break;
 				case "Double Barrel":
 					shot_x = x + lengthdir_x(19, image_angle_-22);
@@ -153,7 +159,9 @@ if(roll_timer <= 0) {
 					image_index = 1;
 					screen_shake(obj_controller.shake_mag_double_barrel, obj_controller.shake_len_double_barrel);
 					audio_play_sound(snd_double_barrel, 1, false);
-					ammo--;
+					if(!cheat_infinite_ammo) {
+						ammo--;
+					}
 					break;
 				case "Trench Shotgun":
 					shot_x = x + lengthdir_x(19, image_angle_-22);
@@ -171,7 +179,9 @@ if(roll_timer <= 0) {
 					image_index = 1;
 					screen_shake(obj_controller.shake_mag_trench_shotgun, obj_controller.shake_len_trench_shotgun);
 					audio_play_sound(snd_trench_shotgun, 1, false);
-					ammo--;
+					if(!cheat_infinite_ammo) {
+						ammo--;
+					}
 					break;
 			}
 		
@@ -181,16 +191,17 @@ if(roll_timer <= 0) {
 
 if(roll_timer > 0) {
 	if((horizontalSpeed != 0 || verticalSpeed != 0) && (roll_timer == roll_length)) {
-		image_speed = 1;
 		roll_direction = point_direction(x, y, x+horizontalSpeed, y+verticalSpeed);
+		image_angle_ = roll_direction;
 	} else if(roll_timer == roll_length) {
-		image_speed = 1;
 		roll_direction = direction;
+		image_angle_ = roll_direction;
 	}
 	sprite_index = spr_player_roll;
 	if(!cheat_invincible) {
 		invincible = true;
 	}
+	image_index = floor((roll_length - roll_timer) / 5);
 	roll_timer--;
 	var dx = lengthdir_x(roll_speed, roll_direction);
     var dy = lengthdir_y(roll_speed, roll_direction);
