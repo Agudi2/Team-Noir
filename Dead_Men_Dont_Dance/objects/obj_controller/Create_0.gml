@@ -10,7 +10,7 @@ damage_tommy_gun = 1;
 damage_double_barrel = 1;
 damage_trench_shotgun = 1;
 
-shotspeed_m1911 = 8;
+shotspeed_m1911 = 12;
 shotspeed_revolver = 12;
 shotspeed_tommy_gun = 8;
 shotspeed_double_barrel = 10;
@@ -22,7 +22,7 @@ friction_tommy_gun = 0.04;
 friction_double_barrel = 0.2;
 friction_trench_shotgun = 0.2;
 
-shoot_timer_m1911 = 35;
+shoot_timer_m1911 = 10;
 shoot_timer_revolver = 35;
 shoot_timer_tommy_gun = 4;
 shoot_timer_double_barrel = 25;
