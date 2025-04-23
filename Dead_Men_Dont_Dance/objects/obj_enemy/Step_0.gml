@@ -40,6 +40,12 @@ if(state == "attack") {
 		exit;
 	}
 	if(attack_timer <= 0) {
+		if (collision_line(x, y, obj_player.x, obj_player.y, obj_blocking, false, true) != noone) {
+			state = "check out";
+			position_target_x = obj_player.x;
+			position_target_y = obj_player.y;
+			exit;
+		}
 		times_fired++;
 		if(distance_to_object(obj_player) >= attack_range_break) {
 			state = "check out";

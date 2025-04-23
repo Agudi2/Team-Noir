@@ -14,7 +14,7 @@ if(obj_controller.debug) {
 	draw_set_alpha(1);
 	
 	var angle_diff = line_of_sight_width;
-	var line_length = 100
+	var line_length = attack_range;
 	var line_middle_x = x + lengthdir_x(line_length, image_angle_)
 	var line_middle_y = y + lengthdir_y(line_length, image_angle_)
 	

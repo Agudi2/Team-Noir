@@ -3,7 +3,7 @@ if(path_exists(path)) {
 }
 path = path_add();
 var movespeed = 0;
-if (state == "attack") {
+if (player_sighted <= 0) {
 	movespeed = walkspeed_attack;
 } else {
 	movespeed = walkspeed_alert;
