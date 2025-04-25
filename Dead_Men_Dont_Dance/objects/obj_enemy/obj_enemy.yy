@@ -34,7 +34,7 @@
     {"$GMObjectProperty":"v1","%Name":"line_of_sight_width","filters":[],"listItems":[],"multiselect":false,"name":"line_of_sight_width","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"40","varType":0,},
     {"$GMObjectProperty":"v1","%Name":"attack_range","filters":[],"listItems":[],"multiselect":false,"name":"attack_range","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"150","varType":1,},
     {"$GMObjectProperty":"v1","%Name":"attack_range_break","filters":[],"listItems":[],"multiselect":false,"name":"attack_range_break","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"175","varType":1,},
-    {"$GMObjectProperty":"v1","%Name":"walkspeed_alert","filters":[],"listItems":[],"multiselect":false,"name":"walkspeed_alert","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":".75","varType":0,},
+    {"$GMObjectProperty":"v1","%Name":"walkspeed_alert","filters":[],"listItems":[],"multiselect":false,"name":"walkspeed_alert","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"1","varType":0,},
     {"$GMObjectProperty":"v1","%Name":"walkspeed_attack","filters":[],"listItems":[],"multiselect":false,"name":"walkspeed_attack","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"1.5","varType":0,},
   ],
   "resourceType":"GMObject",

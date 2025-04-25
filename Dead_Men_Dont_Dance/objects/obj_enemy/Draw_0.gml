@@ -1,7 +1,7 @@
 draw_sprite_ext(sprite_index, image_index, x, y, image_xscale, image_yscale, image_angle_, image_blend, image_alpha);
-draw_sprite(spr_debug_state, emote_index, x, y-20);
 
 if(obj_controller.debug) {
+	draw_sprite(spr_debug_state, emote_index, x, y-20);
 	draw_set_alpha(0.4);
 	draw_circle_color(position_start_x, position_start_y, 3, c_orange, c_orange, 0);
 	draw_circle_color(position_target_x, position_target_y, 3, c_red, c_red, 0);
