@@ -1,13 +1,10 @@
 image_xscale *= 1.5
 image_yscale *= 1.5
 
-weapon_sprite = spr_empty;
-weapon = "None";
-ammo = 0;
+
 shoot_timer = 0;
 recoil_timer = 0;
 image_angle_ = 0;
-grenades = 0;
 feet_image_speed = 0.2;
 feet_image_index = 0;
 
@@ -27,3 +24,15 @@ saved_sprite = spr_empty;
 
 cheat_invincible = false;
 cheat_infinite_ammo = false;
+
+if(!instance_exists(obj_camera)) {
+	instance_create_layer(-32, -32, "Instances", obj_camera);
+}
+
+if(!instance_exists(obj_controller)) {
+	instance_create_layer(-32, -32, "Instances", obj_controller);
+}
+
+if(!instance_exists(obj_pathway_setup)) {
+	instance_create_layer(-32, -32, "Instances", obj_pathway_setup);
+}

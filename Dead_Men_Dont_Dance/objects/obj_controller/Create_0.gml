@@ -1,3 +1,9 @@
+saved_weapon = "None";
+saved_sprite = spr_player;
+saved_weapon_sprite = spr_empty;
+saved_ammo = 0;
+saved_grenades = 0;
+
 ammo_m1911 = 10;
 ammo_revolver = 6;
 ammo_tommy_gun = 30;

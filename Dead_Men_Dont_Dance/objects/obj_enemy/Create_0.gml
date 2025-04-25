@@ -19,6 +19,3 @@ player_sighted = 1;
 attack_time = 60;
 attack_timer = attack_time;
 times_fired = 0;
-
-	var _list = ds_list_create();
-	var _num = collision_circle_list(x, y, attack_range, obj_player, false, true, _list, false);

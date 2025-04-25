@@ -93,6 +93,7 @@
     {"id":{"name":"spr_left_door_horizontal","path":"sprites/spr_left_door_horizontal/spr_left_door_horizontal.yy",},},
     {"id":{"name":"spr_m1911","path":"sprites/spr_m1911/spr_m1911.yy",},},
     {"id":{"name":"spr_mask","path":"sprites/spr_mask/spr_mask.yy",},},
+    {"id":{"name":"spr_next_level","path":"sprites/spr_next_level/spr_next_level.yy",},},
     {"id":{"name":"spr_player_primary_arm","path":"sprites/spr_player_primary_arm/spr_player_primary_arm.yy",},},
     {"id":{"name":"spr_player_roll","path":"sprites/spr_player_roll/spr_player_roll.yy",},},
     {"id":{"name":"spr_player_sidearm","path":"sprites/spr_player_sidearm/spr_player_sidearm.yy",},},

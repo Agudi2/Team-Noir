@@ -1,3 +1,5 @@
+
+
 var _list = ds_list_create();
 var _num = collision_circle_list(x, y, circle_range, obj_enemy, false, true, _list, false);
 if(_num > 0) {
