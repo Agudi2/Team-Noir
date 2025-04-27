@@ -24,15 +24,8 @@ saved_sprite = spr_empty;
 
 cheat_invincible = false;
 cheat_infinite_ammo = false;
-
-if(!instance_exists(obj_camera)) {
-	instance_create_layer(-32, -32, "Instances", obj_camera);
-}
+hide_ui = false;
 
 if(!instance_exists(obj_controller)) {
 	instance_create_layer(-32, -32, "Instances", obj_controller);
-}
-
-if(!instance_exists(obj_pathway_setup)) {
-	instance_create_layer(-32, -32, "Instances", obj_pathway_setup);
 }

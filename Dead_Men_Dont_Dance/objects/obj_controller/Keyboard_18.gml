@@ -35,3 +35,9 @@ if(keyboard_check_pressed(vk_left)) {
 	room_goto_previous();
 }
 
+if(keyboard_check_pressed(ord("U"))) {
+	if(instance_exists(obj_player)) {
+		obj_player.hide_ui = !obj_player.hide_ui;
+	}
+}
+

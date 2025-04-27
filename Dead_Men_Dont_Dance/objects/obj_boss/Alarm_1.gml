@@ -1,5 +1,5 @@
-var targetx = 48;
-var targety = 48;
+var targetx = 16;
+var targety = 16;
 for(var col = 0; col < 7; col++) {
 	for(var row = 0; row < 4; row++) {
 		var _direction = point_direction(x, y, targetx, targety);
@@ -10,7 +10,7 @@ for(var col = 0; col < 7; col++) {
 		grenade.radius = 40;
 		targety += 96;
 	}
-	targety = 48;
+	targety = 16;
 	targetx += 96;
 }
-alarm[1] = 90;
+alarm[0] = 90;

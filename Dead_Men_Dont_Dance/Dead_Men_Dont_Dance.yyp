@@ -71,6 +71,7 @@
     {"id":{"name":"Level1","path":"rooms/Level1/Level1.yy",},},
     {"id":{"name":"Level2","path":"rooms/Level2/Level2.yy",},},
     {"id":{"name":"Level3","path":"rooms/Level3/Level3.yy",},},
+    {"id":{"name":"calculate_initial_speed","path":"scripts/calculate_initial_speed/calculate_initial_speed.yy",},},
     {"id":{"name":"ease_in_and_out","path":"scripts/ease_in_and_out/ease_in_and_out.yy",},},
     {"id":{"name":"screen_shake","path":"scripts/screen_shake/screen_shake.yy",},},
     {"id":{"name":"snd_double_barrel","path":"sounds/snd_double_barrel/snd_double_barrel.yy",},},
