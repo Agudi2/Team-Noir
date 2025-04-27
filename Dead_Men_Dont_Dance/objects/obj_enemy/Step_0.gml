@@ -1,5 +1,28 @@
 image_angle_ -= angle_difference(image_angle_, direction) * 0.1
 
+recoil_timer = max(0, recoil_timer - 1);
+if (recoil_timer == 0 && weapon != "None") {
+	image_index = 0;
+}
+
+if (x-xprev == 0 and y-yprev == 0) {
+	feet_image_index = 0;
+	image_speed = 0;
+	if(weapon_sprite == spr_empty) {
+		image_index = 0;
+	}
+	walk_timer = 0;
+} else {
+	feet_image_index += feet_image_speed;
+	if(weapon_sprite == spr_empty) {
+		image_speed = 1;
+	}
+	walk_timer += 1;
+}
+
+xprev = x;
+yprev = y;
+
 if(state == "check out") {
 	event_user(0);
 	state = "checking out";
@@ -68,6 +91,8 @@ if(state == "attack") {
 					attack_timer = obj_controller.shoot_timer_m1911 * 4;
 					times_fired = 0;
 				}
+				recoil_timer = obj_controller.recoil_m1911;
+				image_index = 1;
 				audio_play_sound(snd_m1911, 1, false);
 				break;
 			case "Revolver":
@@ -82,6 +107,8 @@ if(state == "attack") {
 					attack_timer = obj_controller.shoot_timer_revolver * 4;
 					times_fired = 0;
 				}
+				recoil_timer = obj_controller.recoil_revolver;
+				image_index = 1;
 				audio_play_sound(snd_revolver, 1, false);
 				break;
 			case "Tommy Gun":
@@ -96,6 +123,8 @@ if(state == "attack") {
 					attack_timer = 80;
 					times_fired = 0;
 				}
+				recoil_timer = obj_controller.recoil_tommy_gun;
+				image_index = 1;
 				audio_play_sound(snd_tommy_gun, 1, false);
 				break;
 			case "Double Barrel":
@@ -112,6 +141,8 @@ if(state == "attack") {
 					attack_timer = obj_controller.shoot_timer_double_barrel * 8;
 					times_fired = 0;
 				}
+				recoil_timer = obj_controller.recoil_double_barrel;
+				image_index = 1;
 				audio_play_sound(snd_double_barrel, 1, false);
 				break;
 			case "Trench Shotgun":
@@ -128,6 +159,8 @@ if(state == "attack") {
 					attack_timer = obj_controller.shoot_timer_trench_shotgun * 4;
 					times_fired = 0;
 				}
+				recoil_timer = obj_controller.recoil_trench_shotgun;
+				image_index = 1;
 				audio_play_sound(snd_trench_shotgun, 1, false);
 				break;
 		}
