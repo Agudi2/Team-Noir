@@ -1,3 +1,4 @@
+phase=1;
 var targetx = 48;
 var targety = 48;
 var weapon_thrown = false;
@@ -47,4 +48,9 @@ for(var col = 0; col < 7; col++) {
 	targety = 48;
 	targetx += 96;
 }
-alarm[1] = 90;
+
+if(health_points > 120) {
+	alarm[1] = 90;
+} else {
+	alarm[2] = 60;
+}

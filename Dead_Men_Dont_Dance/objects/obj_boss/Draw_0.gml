@@ -15,3 +15,7 @@ draw_set_color(c_white);
 draw_rectangle(x-bar_width/2, y-32, x+bar_width/2, y-32+bar_height, true);
 
 draw_self();
+
+if(obj_controller.debug) {
+	draw_text(x, y+20, "Phase: "+string(phase));
+}

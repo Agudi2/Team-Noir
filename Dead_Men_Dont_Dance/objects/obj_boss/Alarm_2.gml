@@ -1,11 +1,11 @@
-image_xscale = 1.75;
-image_yscale = 1.75;
-image_speed = 0;
-alarm[0] = 240;
-weapons_thrown = 0;
-health_total = 180;
-health_points = health_total;
-phase = 0;
+if(instance_exists(obj_weapon_pickup)) {
+	instance_destroy(obj_weapon_pickup);
+}
+
+if(instance_exists(obj_weapon_throw)) {
+	instance_destroy(obj_weapon_throw);
+}
+
 if(instance_exists(obj_player)) {
 	obj_player.weapon = "None";
 	obj_player.weapon_sprite = spr_empty;
@@ -16,3 +16,5 @@ if(instance_exists(obj_player)) {
 		obj_player.saved_sprite = spr_player;
 	}
 }
+
+alarm[3] = 90;

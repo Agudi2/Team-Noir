@@ -29,3 +29,5 @@ if(weapon_sprite != spr_empty) {
 	pickup.sprite_index = passed_sprite;
 	pickup.ammo = passed_ammo;
 }
+
+instance_create_layer(x, y, "Instances", obj_gameover);
