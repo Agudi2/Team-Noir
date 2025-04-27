@@ -1,5 +1,7 @@
 alarm[0] = timer;
-audio_play_sound(explosion_sound, 1, false);
+if(!audio_is_playing(snd_grenade_explosion)) {
+	audio_play_sound(explosion_sound, 1, false);
+}
 screen_shake(7, 13);
 var __list = ds_list_create();
 var __num = collision_circle_list(x, y, circle_sound_range, obj_enemy, false, true, __list, false);
