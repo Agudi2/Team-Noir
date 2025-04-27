@@ -10,11 +10,11 @@ ammo_tommy_gun = 30;
 ammo_double_barrel = 2;
 ammo_trench_shotgun = 5;
 
-damage_m1911 = 1;
-damage_revolver = 1;
+damage_m1911 = 3;
+damage_revolver = 5;
 damage_tommy_gun = 1;
-damage_double_barrel = 1;
-damage_trench_shotgun = 1;
+damage_double_barrel = 3;
+damage_trench_shotgun = 2;
 
 shotspeed_m1911 = 12;
 shotspeed_revolver = 12;
