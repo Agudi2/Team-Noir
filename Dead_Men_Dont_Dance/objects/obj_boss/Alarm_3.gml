@@ -1,1 +1,2 @@
-phase = 2;
+phase = nextphase;
+weapons_thrown = 0;

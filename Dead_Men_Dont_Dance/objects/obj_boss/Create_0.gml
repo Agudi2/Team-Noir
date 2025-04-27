@@ -2,17 +2,11 @@ image_xscale = 1.75;
 image_yscale = 1.75;
 image_speed = 0;
 alarm[0] = 240;
+shoot_timer = 10;
 weapons_thrown = 0;
+spin = 1.75;
 health_total = 180;
 health_points = health_total;
 phase = 0;
-if(instance_exists(obj_player)) {
-	obj_player.weapon = "None";
-	obj_player.weapon_sprite = spr_empty;
-	obj_player.ammo = 0;
-	if(obj_player.roll_timer <= 0) {
-		obj_player.sprite_index = spr_player;
-	} else {
-		obj_player.saved_sprite = spr_player;
-	}
-}
+nextphase = 1;
+throw_timer = 120;

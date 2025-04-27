@@ -51,5 +51,5 @@ for(var col = 0; col < 7; col++) {
 if(health_points > 120) {
 	alarm[0] = 90;
 } else {
-	alarm[2] = 60;
+	alarm[2] = 30;
 }
