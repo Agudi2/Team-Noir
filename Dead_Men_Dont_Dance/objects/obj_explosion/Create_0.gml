@@ -1,4 +1,4 @@
-alarm[0] = timer;
+timer = 0;
 if(!audio_is_playing(snd_grenade_explosion)) {
 	audio_play_sound(explosion_sound, 1, false);
 }
