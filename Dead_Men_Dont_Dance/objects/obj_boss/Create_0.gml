@@ -10,3 +10,14 @@ health_points = health_total;
 phase = 0;
 nextphase = 1;
 throw_timer = 120;
+xprev = x;
+yprev = y;
+walk_timer = 0;
+feet_image_index = 0;
+feet_image_speed = 0.2;
+path = noone;
+phase2_throws = array_create(14, 0);
+for(var i = 1; i < 15; i++) {
+	phase2_throws[i-1] = i*30;
+}
+max_throw_timer = 210;

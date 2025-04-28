@@ -67,6 +67,7 @@
     {"id":{"name":"obj_wall","path":"objects/obj_wall/obj_wall.yy",},},
     {"id":{"name":"obj_weapon_pickup","path":"objects/obj_weapon_pickup/obj_weapon_pickup.yy",},},
     {"id":{"name":"obj_weapon_throw","path":"objects/obj_weapon_throw/obj_weapon_throw.yy",},},
+    {"id":{"name":"obj_win","path":"objects/obj_win/obj_win.yy",},},
     {"id":{"name":"BossLevel","path":"rooms/BossLevel/BossLevel.yy",},},
     {"id":{"name":"dev_room_designer","path":"rooms/dev_room_designer/dev_room_designer.yy",},},
     {"id":{"name":"dev_room_programmer","path":"rooms/dev_room_programmer/dev_room_programmer.yy",},},

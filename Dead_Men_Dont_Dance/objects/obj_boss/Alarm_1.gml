@@ -30,7 +30,7 @@ for(var col = 0; col < 7; col++) {
 					weapon.sprite_index = spr_double_barrel;
 					break;
 				case 4:
-					weapon.ammo = 5;
+					weapon.ammo = 4;
 					weapon.sprite_index = spr_trench_shotgun;
 					break;
 			}
