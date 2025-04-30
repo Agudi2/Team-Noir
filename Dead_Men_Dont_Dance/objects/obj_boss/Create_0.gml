@@ -20,4 +20,4 @@ phase2_throws = array_create(14, 0);
 for(var i = 1; i < 15; i++) {
 	phase2_throws[i-1] = i*30;
 }
-max_throw_timer = 210;
+max_throw_timer = 180;
