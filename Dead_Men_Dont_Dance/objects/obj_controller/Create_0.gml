@@ -13,7 +13,7 @@ ammo_trench_shotgun = 5;
 damage_m1911 = 3;
 damage_revolver = 5;
 damage_tommy_gun = 1;
-damage_double_barrel = 3;
+damage_double_barrel = 4;
 damage_trench_shotgun = 2;
 
 shotspeed_m1911 = 12;

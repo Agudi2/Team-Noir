@@ -27,5 +27,5 @@ cheat_infinite_ammo = false;
 hide_ui = false;
 
 if(!instance_exists(obj_controller)) {
-	instance_create_layer(-32, -32, "Instances", obj_controller);
+	instance_create_layer(-64, -64, "Instances", obj_controller);
 }

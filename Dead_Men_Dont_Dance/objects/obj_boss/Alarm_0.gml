@@ -1,3 +1,4 @@
+phase=1;
 var targetx = 48;
 var targety = 48;
 var weapon_thrown = false;
@@ -30,7 +31,7 @@ for(var col = 0; col < 7; col++) {
 					weapon.sprite_index = spr_double_barrel;
 					break;
 				case 4:
-					weapon.ammo = 5;
+					weapon.ammo = 4;
 					weapon.sprite_index = spr_trench_shotgun;
 					break;
 			}
@@ -47,4 +48,9 @@ for(var col = 0; col < 7; col++) {
 	targety = 48;
 	targetx += 96;
 }
-alarm[1] = 90;
+
+if(health_points > 120) {
+	alarm[1] = 90;
+} else {
+	alarm[2] = 30;
+}

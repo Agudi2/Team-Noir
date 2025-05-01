@@ -9,7 +9,7 @@
   "bitRate":128,
   "compression":0,
   "conversionMode":0,
-  "duration":0.744,
+  "duration":2.16,
   "name":"snd_grenade_explosion",
   "parent":{
     "name":"Sounds",

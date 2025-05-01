@@ -1,7 +1,23 @@
-image_xscale = 1.5;
-image_yscale = 1.5;
+image_xscale = 1.75;
+image_yscale = 1.75;
 image_speed = 0;
 alarm[0] = 240;
+shoot_timer = 10;
 weapons_thrown = 0;
-health_total = 100;
+spin = 1.75;
+health_total = 180;
 health_points = health_total;
+phase = 0;
+nextphase = 1;
+throw_timer = 120;
+xprev = x;
+yprev = y;
+walk_timer = 0;
+feet_image_index = 0;
+feet_image_speed = 0.2;
+path = noone;
+phase2_throws = array_create(14, 0);
+for(var i = 1; i < 15; i++) {
+	phase2_throws[i-1] = i*30;
+}
+max_throw_timer = 180;
