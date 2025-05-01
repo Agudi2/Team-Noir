@@ -11,7 +11,7 @@ weapon_sprite = spr_empty;
 weapon = "None";
 image_speed = 0;
 image_angle_ = 0;
-recoil_timer = 0;
+recoil_timer = 1;
 
 
 state = "idle";
