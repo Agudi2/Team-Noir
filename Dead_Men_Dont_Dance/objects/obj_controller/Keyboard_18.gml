@@ -41,3 +41,10 @@ if(keyboard_check_pressed(ord("U"))) {
 	}
 }
 
+if(keyboard_check_pressed(ord("O"))) {
+	camera_set_view_size(view_camera[0], camera_get_view_width(view_camera[0])-camera_get_view_width(view_camera[0])/5, camera_get_view_height(view_camera[0])-camera_get_view_height(view_camera[0])/5);
+}
+
+if(keyboard_check_pressed(ord("P"))) {
+	camera_set_view_size(view_camera[0], camera_get_view_width(view_camera[0])+camera_get_view_width(view_camera[0])/5, camera_get_view_height(view_camera[0])+camera_get_view_height(view_camera[0])/5);
+}

@@ -8,4 +8,3 @@ if(instance_exists(target)) {
 	shake_remain = max(0, shake_remain-((1/shake_length)*shake_magnitude));
 	camera_set_view_pos(view_camera[0], cameraX, cameraY);
 }
-

@@ -1,3 +1,3 @@
 if(keyboard_check_pressed(ord("E"))) {
-	room_goto_next();
+	fade_to_next();
 }

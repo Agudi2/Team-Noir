@@ -30,4 +30,27 @@ if(weapon_sprite != spr_empty) {
 	pickup.ammo = passed_ammo;
 }
 
+var corpse = instance_create_layer(x, y, "Instances", obj_player_dead);
+corpse.sprite_index = spr_player_dead;
+corpse.image_xscale = image_xscale;
+corpse.image_yscale = image_yscale;
+corpse.image_angle = image_angle_;
+corpse.direction = direction;
+var blood = instance_create_layer(x, y, "Instances", obj_blood_pool);
+var pool = irandom(2);
+switch(pool) {
+	case 0:
+		blood.sprite_index = spr_blood_1;
+		break;
+	case 1:
+		blood.sprite_index = spr_blood_2;
+		break;
+	case 2:
+		blood.sprite_index = spr_blood_3;
+		break;
+}
+blood.image_xscale = image_xscale;
+blood.image_yscale = image_yscale;
+blood.image_angle = image_angle_;
+blood.direction = direction;
 instance_create_layer(x, y, "Instances", obj_gameover);

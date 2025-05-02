@@ -42,15 +42,6 @@ switch(pose) {
 	case 2:
 		corpse.sprite_index = spr_enemy_dead_3;
 		break;
-	case 3:
-		corpse.sprite_index = spr_enemy_dead_1;
-		break;
-	case 4:
-		corpse.sprite_index = spr_enemy_dead_1;
-		break;
-	case 5:
-		corpse.sprite_index = spr_enemy_dead_1;
-		break;
 }
 corpse.image_xscale = image_xscale;
 corpse.image_yscale = image_yscale;
@@ -68,15 +59,6 @@ switch(pool) {
 		break;
 	case 2:
 		blood.sprite_index = spr_blood_3;
-		break;
-	case 3:
-		blood.sprite_index = spr_blood_1;
-		break;
-	case 4:
-		blood.sprite_index = spr_blood_1;
-		break;
-	case 5:
-		blood.sprite_index = spr_blood_1;
 		break;
 }
 blood.image_xscale = image_xscale;
