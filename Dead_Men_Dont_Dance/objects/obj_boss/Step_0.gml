@@ -1,21 +1,22 @@
 if(phase == 2) {
+	sprite_index = spr_boss_phase2;
 	shoot_timer--;
 	throw_timer--;
 	if(shoot_timer <= 0) {
 		shoot_timer = obj_controller.shoot_timer_tommy_gun;
 		var shot = instance_create_layer(x, y, "Instances", obj_shot_enemy);
-		shot.direction = image_angle+90;
+		shot.direction = image_angle+100;
 		shot.speed = obj_controller.shotspeed_tommy_gun;
 		shot.friction = obj_controller.friction_tommy_gun;
 		shot.damage = obj_controller.damage_tommy_gun;
-		shot.image_angle = image_angle+90;
+		shot.image_angle = image_angle+100;
 		shoot_timer = obj_controller.shoot_timer_tommy_gun;
 		shot = instance_create_layer(x, y, "Instances", obj_shot_enemy);
-		shot.direction = image_angle-90;
+		shot.direction = image_angle-80;
 		shot.speed = obj_controller.shotspeed_tommy_gun;
 		shot.friction = obj_controller.friction_tommy_gun;
 		shot.damage = obj_controller.damage_tommy_gun;
-		shot.image_angle = image_angle-90;
+		shot.image_angle = image_angle-80;
 		audio_play_sound(snd_tommy_gun, 1, false);
 		if(throw_timer <= 0 and weapons_thrown < 5) {
 			var weapon = instance_create_layer(x, y, "Instances", obj_weapon_throw);
@@ -58,6 +59,7 @@ if(phase == 2) {
 }
 
 if(phase = -1) {
+	sprite_index = spr_enemy;
 	image_angle = lerp(image_angle, 0, 0.1);
 	direction = lerp(direction, 0, 0.1);
 	alarm[4] = 30;
