@@ -1,1 +1,0 @@
-sprite_index = spr_tommy_gun;
